@@ -69,9 +69,8 @@ public class Main {
             case '-' -> ans = num1 - num2;
             case '*' -> ans = num1 * num2;
             case '/' -> ans = num1 / num2;
-            default -> {
-                throw new IOException("Ошибка! Формат математической операции не удовлетворяет заданию. ");
-            }
+            default -> throw new IOException("Ошибка! Формат математической операции не удовлетворяет заданию. ");
+
         }
         return ans;
     }
@@ -94,4 +93,3 @@ public class Main {
         return roman[numArabian];
     }
 }
-//github update test
