@@ -32,7 +32,7 @@ public class Main {
                 throw new IOException("Ошибка! Введенные числа должны быть от I до X.");}
             ans = calculated(num1, num2, mainOperation);
             if ( ans <= 0 ) {
-                throw new IOException("Ошибка! Результат не может быть отрицательным."); }
+                throw new IOException("Ошибка! Результат не может быть отрицательным или 0."); }
             String resultRoman = NumToRoman(ans);                               // перевод из арабской в римскую систему
             System.out.println(resultRoman); System.exit(0);
 
@@ -81,7 +81,7 @@ public class Main {
     // данном этапе проще было исользовать "брут форс" так как тут я хотя бы понимаю принцип работы. Хотя объективно
     // другие варианты более масштабируемы и удобны в будущем.
     private static String NumToRoman (int numArabian) {
-        String[] roman = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV",
+        String[] roman = {"N", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV",
             "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII",
             "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL",
             "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L", "LI", "LII", "LIII", "LIV",
